@@ -1,5 +1,7 @@
 # Learn go with tests
 
+[![Go Test](https://github.com/npikall/learn-go/actions/workflows/ci.yml/badge.svg)](https://github.com/npikall/learn-go/actions/workflows/ci.yml)
+
 This is the implementation of the guide [learn go with tests]
 
 ## Learnings
