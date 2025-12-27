@@ -20,6 +20,6 @@ go test -bench=. (--benchmem)
 go vet
 ```
 
-![Gopher](https://github.com/egonelbre/gophers/vector/projects/network-side.svg)
+![Gopher](https://raw.githubusercontent.com/egonelbre/gophers/master/.thumb/vector/projects/network-side.png)
 
 [learn go with tests]: https://quii.gitbook.io/learn-go-with-tests
