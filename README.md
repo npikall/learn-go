@@ -4,7 +4,7 @@
 
 This is the implementation of the guide [learn go with tests]
 
-## Learnings
+## Useful Commands
 
 ```bash
 # to run the tests
@@ -15,6 +15,11 @@ go test -cover
 
 # to run benchmarks (with information about memory allocation [-benchmem])
 go test -bench=. (--benchmem)
+
+# running something like a linter
+go vet
 ```
+
+![Gopher](https://github.com/egonelbre/gophers/vector/projects/network-side.svg)
 
 [learn go with tests]: https://quii.gitbook.io/learn-go-with-tests
