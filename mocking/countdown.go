@@ -1,7 +1,7 @@
 package main
 
 import (
-	"learn-go/mocking/countdown"
+	"github.com/npikall/learn-go/mocking/countdown"
 	"os"
 )
 
