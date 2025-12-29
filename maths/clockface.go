@@ -11,10 +11,35 @@ type Point struct {
 	Y float64
 }
 
+// Scale the unit vector of a point
+func (p *Point) Scale(scale float64) {
+	p.X *= scale
+	p.Y *= scale
+}
+
+// Flip the y-axis
+func (p *Point) FlipY() {
+	p.Y = -p.Y
+}
+
+// Moves a Point by the given vector/point
+func (p *Point) Offset(o Point) {
+	p.X += o.X
+	p.Y += o.Y
+}
+
+const secondHandLength = 90
+const clockCenterX = 150
+const clockCenterY = 150
+
 // SecondHand is the unit vector of the second hand of an analogue clock at time `t`
 // represented as a Point.
 func SecondHand(t time.Time) Point {
-	return Point{150, 60}
+	p := secondHandPoint(t)
+	p.Scale(secondHandLength)
+	p.FlipY()
+	p.Offset(Point{X: clockCenterX, Y: clockCenterY})
+	return p
 }
 
 func secondsInRadians(t time.Time) float64 {
