@@ -7,11 +7,30 @@ import (
 )
 
 func TestSecondsInRadians(t *testing.T) {
-	thirtySeconds := time.Date(1492, time.April, 1, 0, 0, 30, 0, time.UTC)
-	want := math.Pi
-	got := secondsInRadians(thirtySeconds)
-
-	if got != want {
-		t.Fatalf("wanted %v radians, but got %v", want, got)
+	cases := []struct {
+		time  time.Time
+		angle float64
+	}{
+		{simpleTime(0, 0, 30), math.Pi},
+		{simpleTime(0, 0, 0), 0},
+		{simpleTime(0, 0, 45), (math.Pi / 2) * 3},
+		{simpleTime(0, 0, 7), (math.Pi / 30) * 7},
 	}
+
+	for _, tt := range cases {
+		t.Run(testName(tt.time), func(t *testing.T) {
+			got := secondsInRadians(tt.time)
+			if got != tt.angle {
+				t.Fatalf("wanted %v radians, but got %v", tt.angle, got)
+			}
+		})
+	}
+}
+
+func simpleTime(hours, minutes, seconds int) time.Time {
+	return time.Date(1492, time.April, 1, hours, minutes, seconds, 0, time.UTC)
+}
+
+func testName(t time.Time) string {
+	return t.Format("15:04:05")
 }
