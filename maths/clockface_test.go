@@ -1,19 +1,17 @@
-package clockface_test
+package clockface
 
 import (
+	"math"
 	"testing"
 	"time"
-
-	clockface "github.com/npikall/learn-go/maths"
 )
 
-func TestSecondHandAtMidnight(t *testing.T) {
-	tm := time.Date(1492, time.January, 1, 0, 0, 0, 0, time.UTC)
-
-	want := clockface.Point{X: 150, Y: 150 - 90}
-	got := clockface.SecondHand(tm)
+func TestSecondsInRadians(t *testing.T) {
+	thirtySeconds := time.Date(1492, time.April, 1, 0, 0, 30, 0, time.UTC)
+	want := math.Pi
+	got := secondsInRadians(thirtySeconds)
 
 	if got != want {
-		t.Errorf("got %v want %v", got, want)
+		t.Fatalf("wanted %v radians, but got %v", want, got)
 	}
 }
