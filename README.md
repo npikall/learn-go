@@ -2,7 +2,7 @@
 
 [![Go Test](https://github.com/npikall/learn-go/actions/workflows/ci.yml/badge.svg)](https://github.com/npikall/learn-go/actions/workflows/ci.yml)
 
-This is the implementation of the guide [learn go with tests]
+This is the implementation of the book [`Learn Go with Tests`][learn go with tests]
 
 ## Useful Commands
 
