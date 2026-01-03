@@ -1,7 +1,7 @@
 # Learn go with tests
 
 [![Go Test](https://github.com/npikall/learn-go/actions/workflows/ci.yml/badge.svg)](https://github.com/npikall/learn-go/actions/workflows/ci.yml)
-
+[![Go Report Card](https://goreportcard.com/badge/github.com/npikall/learn-go)](https://goreportcard.com/report/github.com/npikall/learn-go)
 This is the implementation of the book [`Learn Go with Tests`][learn go with tests]
 
 ## Useful Commands
